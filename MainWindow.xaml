@@ -1,0 +1,40 @@
+﻿<Window x:Class="poczta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:poczta"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <GroupBox Header="Rodzaj przesyłki">
+                    <StackPanel>
+                        <RadioButton GroupName="wybor" x:Name="a">Pocztówka</RadioButton>
+                        <RadioButton GroupName="wybor" x:Name="b">List</RadioButton>
+                        <RadioButton GroupName="wybor" x:Name="c">Paczka</RadioButton>
+                    </StackPanel>
+
+                </GroupBox>
+                <Button Click="Button_Click">Sprawdz cenę</Button>
+                <StackPanel Orientation="Horizontal">
+                    <Image x:Name="image"></Image>
+                    <TextBlock x:Name="cena" FontWeight="Bold" ></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <GroupBox Header="Dane adresowe">
+                <StackPanel>
+                    <Label>Ulica z numerem</Label>
+                    <TextBox x:Name="ulica"></TextBox>
+                    <Label>Kod pocztowy</Label>
+                    <TextBox x:Name="kod"></TextBox>
+                    <Label>Miasto</Label>
+                    <TextBox x:Name="miasto"></TextBox>
+                </StackPanel>
+
+            </GroupBox>
+        </StackPanel>
+        <Button Click="Button_Click_1">Zatwierdz</Button>
+    </StackPanel>
+</Window>
